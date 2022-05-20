@@ -110,8 +110,17 @@ section{
     padding: 5% 10%;
 }
 
-.projects .row{
+.projects h5{
+    font-size: 30px;
+}
 
+.projects .btn{
+    background-color: #aecbed;
+}
+
+.projects .btn:hover{
+    background-color: rgb(39, 39, 39);
+    color: #aecbed;
 }
 
 /* skills */

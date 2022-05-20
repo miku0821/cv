@@ -18,7 +18,115 @@
 <body>
     <div class="container-fluid p-0">
         <!-- navbar -->
-        <?php include "navbar.php";?>
+        <div class="sidenav d-none d-md-block">
+            <nav>
+                <div class="d-flex align-items-start">
+                    <div
+                        class="nav flex-column nav-pills"
+                        id="v-pills-tab"
+                        role="tablist"
+                        aria-orientation="vertical"
+                    >
+                        <button
+                        onclick="location.href='#home'"
+                        class="nav-link active"
+                        id="v-pills-home-tab"
+                        data-bs-toggle="tab"
+                        role="tab"
+                        aria-controls="v-pills-home"
+                        aria-selected="true"
+                        >
+                        <div class="nav-tile">
+                            <i class="fa-solid fa-house"></i>
+                            <p class="mx-auto">Home</p>
+                        </div>
+                        </button>
+                        <button
+                        onclick="location.href='#about'"
+                        class="nav-link"
+                        id="v-pills-home-tab"
+                        data-bs-toggle="tab"
+                        role="tab"
+                        aria-controls="v-pills-home"
+                        aria-selected="true"
+                        >
+                        <div class="nav-tile">
+                            <i class="fa-solid fa-user"></i>
+                            <p class="mx-auto">About</p>
+                        </div>
+                        </button>
+                        <button
+                        onclick="location.href='#projects'"
+                        class="nav-link"
+                        id="v-pills-profile-tab"
+                        data-bs-toggle="tab"
+                        role="button"
+                        buttonria-controls="v-pills-profile"
+                        aria-selected="false"
+                        >
+                        <div class="nav-tile">
+                            <i class="fa-solid fa-folder"></i>
+                            <p>Projects</p>
+                        </div>
+                        </button>
+                        <button
+                        onclick="location.href='#skills'"
+                        class="nav-link"
+                        id="v-pills-messages-tab"
+                        data-bs-toggle="tab"
+                        role="tab"
+                        aria-controls="v-pills-messages"
+                        aria-selected="false"
+                        >
+                        <div class="nav-tile">
+                            <i class="fa-solid fa-code"></i>
+                            <p>Skills</p> 
+                        </div>
+                        </button>
+                        <button
+                        onclick="location.href='#education'"
+                        class="nav-link"
+                        data-bs-toggle="tab"
+                        role="tab"
+                        aria-controls="v-pills-settings"
+                        aria-selected="false"
+                        >
+                        <div class="nav-tile">
+                            <i class="fa-solid fa-building-columns"></i>
+                            <p>Education</p>
+                        </div>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+        </div>   
+                  
+        <nav class="navbar navbar-light bg-dark d-sm-block d-md-none">
+          <a class="navbar-brand" href="#">Miku's Portfolio</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+              <a class="nav-link" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+              </li>
+              <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+              </li>
+              <li>
+                <a class="nav-link" href="#education">Education</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- end of navbar -->
 
         <div class="main">
             <main>
@@ -30,7 +138,7 @@
                         <!-- <div class="container"> -->
                         <section class="about" id="about">
                             <h2 class="text-center">About Me</h2>
-                            <p>永川美空です。2021年の5月からプログラミングの勉強を始めました。PHPを初めに学び、その後Laravelを習得しました。現在はUdemyでweb developmentコースを用いてJavaScriptを中心に学習を続けています。今後の目標は、成長できる企業で働きながら様々な経験と知識をつけて、業務システムの開発に携わることです。流学区や英会話講師としてのアルバイト経験もあるので、いつかグローバル案件に携わりたいと考えています。</p>
+                            <p>永川美空です。2021年の5月からプログラミングの勉強を始めました。PHPを初めに学び、その後Laravelを習得しました。現在はUdemyでweb developmentコースを用いてJavaScriptを中心に学習を続けています。今後の目標は、成長できる企業で働きながら様々な経験と知識をつけて、業務システムの開発に携わることです。留学や英会話講師としてのアルバイト経験もあるので、いつかグローバル案件に携わりたいと考えています。</p>
                             
                         </section>
                     </div>
@@ -38,13 +146,166 @@
                 
 
                     <!-- projects section -->
-                        <?php include 'projects.php'; ?>
+                    <section class="projects" id="projects">
+                        <div class="col-md-12">
+                            <h2 class="section-title text-center">Projects</h2>
+                        </div>
+                        <div class="row justify-content-center">
+                            <div class="col-md-7 mb-4">
+                            <div class="card">
+                                <img src="assets/img/skyblog_image.png" class="card-img-top" alt="...">
+                                <div class="card-body border-top">
+                                    <h5 class="card-title text-dark text-center">Skyblog</h5>
+                                    <p class="text-dark">Skyblogというサイトを作成しました。空をテーマにしたBlogになっており、Administrator専用のDashboardにはBlog運営に必要な機能を実装してみました。バックエンドは初めてLaravelで作ってみたのでぜひ覗いてみてください。
+                                    </p>
+                                    <div class="site-btn text-center">
+                                        <a href="https://skyblog-app.herokuapp.com/" class="btn">Go to the website</a>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </section>
 
                     <!-- skills section -->
-                        <?php include 'skills.php'; ?>
+                    <section class="skills" id="skills">
+                        <div class="col-md-12">
+                            <div class="col-md-12">
+                                <h2 class="section-title text-center">Skills</h2>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <ul class="list-inline mx-auto skill-icon">
+                                    <li class="list-inline-item mx-3">
+                                        <span>
+                                            <div class="text-center skills-tile">
+                                                <i class="fa-brands fa-html5"></i>
+                                                <p>HTML5</p>
+                                            </div>
+                                        </span>
+                                    </li>
+                                    <li class="list-inline-item mx-3">
+                                        <span>
+                                            <div class="text-center skills-tile">
+                                                <i class="fa-brands fa-css3"></i>
+                                                <p>CSS3</p>
+                                            </div>
+                                    </span>
+                                    </li>
+                                    <li class="list-inline-item mx-3">
+                                        <span>
+                                            <div class="text-center skills-tile">
+                                                <i class="fa-brands fa-bootstrap"></i>
+                                                <p>Bootstrap</p>
+                                            </div>
+                                        </span>
+                                    </li>
+                                    <li class="list-inline-item mx-3">
+                                        <span>
+                                            <div class="text-center skills-tile">
+                                                <i class="fa-brands fa-js"></i>
+                                                <p>JavaScript</p>
+                                            </div>
+                                        </span>
+                                    </li>
+                                    <li class="list-inline-item mx-3">
+                                        <span>
+                                            <div class="text-center skills-tile">
+                                                <i class="fa-brands fa-php"></i>
+                                                <p>PHP</p>
+                                            </div>
+                                        </span>
+                                    </li>
+                                    <li class="list-inline-item mx-3">
+                                        <span>
+                                            <div class="text-center skills-tile">
+                                                <i class="fa-brands fa-laravel"></i>
+                                                <p>Laravel</p>
+                                            </div>
+                                        </span>
+                                    </li>
+                                    <li class="list-inline-item mx-3">
+                                        <span>
+                                            <div class="text-center skills-tile">
+                                                <i class="fa-solid fa-database"></i>
+                                                <p>MySQL</p>
+                                            </div>
+                                        </span>
+                                    </li>
+                                    <li class="list-inline-item mx-3">
+                                        <span>
+                                            <div class="text-center skills-tile">
+                                                <i class="fa-brands fa-git-alt"></i>
+                                                <p>Git</p>
+                                            </div>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
 
                     <!-- education -->
-                        <?php include 'education.php'; ?>
+                    <section class="education" id="education">
+                        <div class="col-md-12">
+                            <h2 class="section-title text-center">Education</h2>
+                        </div>
+                    
+                     
+                        <div class="col-md-12">
+                    
+                            <div class="timeline">
+                                <span class="timeline-icon"></span>
+                                <div class="timeline-content-right">
+                                    <i class="fa-solid fa-building-columns"></i>
+                                    <h5>関西大学</h5>
+                                    <h6>外国語学部　入学</h6>
+                                </div>
+                                <div class="year-left">
+                                    <span>2017~</span>
+                                </div>
+                            </div> 
+                    
+                    
+                            <div class="timeline">
+                                <span class="timeline-icon"></span>
+                                <div class="timeline-content">
+                                    <i class="fa-solid fa-earth-europe"></i>
+                                        <h5>University of Warwick, UK</h5>
+                                        <h6>Applied Linguistics</h6>
+                                </div>
+                                <div class="year">
+                                    <span>2018 4月~12月</span>
+                                </div>
+                            </div>
+                    
+                    
+                            <div class="timeline">
+                                <span class="timeline-icon"></span>
+                                <div class="timeline-content-right">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                    <h5>関西大学</h5>
+                                    <h6>外国語学部　卒業</h6>
+                                </div>
+                                <div class="year-left">
+                                    <span>2021</span> 
+                                </div>
+                            </div>
+                    
+                    
+                            <div class="timeline">
+                                <span class="timeline-icon"></span>
+                                <div class="timeline-content">
+                                    <i class="fa-solid fa-desktop"></i>
+                                    <h5>Kredo</h5>
+                                    <h6>Programming School</h6>
+                                </div>
+                                <div class="year">
+                                    <span>2021</span>
+                                </div>
+                            </div>
+                    
+                        </div>
+                    </section>
                 <!-- </div> -->
             </main>
         </div>
