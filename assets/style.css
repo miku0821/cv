@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+@media screen and (max-width: 767.98px) {
+    .home h1{
+        font-size: 30px;
+    }
+    .main {
+        padding-left: 0 !important;
+    }
+}
+
+body{
+    background-image: url("img/star.jpeg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* nav */
+.nav{
+    width: 130px;
+    height: 100vh;
+    background-color: #222;
+    padding: 0 !important;
+    position: fixed;
+    z-index: 5;
+    overflow-x: hidden;
+}
+
+.nav button.nav-link{
+    background-color: #222;
+    color: white;
+    border-radius: 0 !important;
+    height: 100px;
+    width: 100% !important;
+    border: none;
+}
+
+.nav-pills .nav-link.active{
+    background-color: rgb(21, 21, 23) !important;
+}
+
+.nav .nav-tile{
+    padding: 15% 0;
+}
+
+.nav .nav-tile i{
+    font-size: 150%;
+}
+
+.nav .nav-tile p{
+    margin-top: 4px;
+}
+
+.navbar a{
+    color: aliceblue !important;
+}
+
+#topnav a:hover{
+    color: rgb(42, 43, 43);
+}
+
+/* main */
+
+.main{
+    padding-left: 130px;
+}
+
+section{
+    padding: 30px 0;
+}
+
+.main h2{
+    margin-bottom: 40px;
+}
+
+.home{
+
+    height: 100vh;
+
+    position: relative;
+}
+
+.home h1{
+    color: white;
+    position: absolute;
+    top: 200px;
+    right: 100px;
+}
+
+
+/* about */
+.about{
+    padding: 5%;
+    background-color: rgba(210, 207, 207, 0.099);
+    border-radius: 10px;
+}
+
+.about p{
+    padding: 30px;
+    color: white;
+}
+
+
+/* projects */
+.projects{
+    padding: 5% 10%;
+}
+
+.projects .row{
+
+}
+
+/* skills */
+.skills{
+    padding: 5% 0%;
+    background-color: rgba(210, 207, 207, 0.099);
+    border-radius: 10px;
+}
+
+.skills .skills-tile{
+    background-color: rgba(248,245,244,.05);
+    padding: 20px 5px 5px;
+    width: 110px;
+    margin: 5px 0;
+    border-radius: 8px;
+}
+
+.skills i{
+    font-size: 220% ;
+}
+
+.skills p{
+    margin-top: 4px;
+}
+
+
+/* education section */
+.education{
+    padding: 5% 5%;
+    /* border: 1px solid greenyellow; */
+}
+
+.education .timeline{
+    position: relative;
+    /* border: 1px solid rgb(233, 21, 10); */
+    padding: 3% 0;
+}
+
+.education .timeline::before{
+    content: "";
+    width: 5px;
+    height: 100%;
+    background-color: rgb(234, 230, 248);
+    display: block;
+    margin: 0px auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* border: 1px solid gold; */
+    clear: both;
+}
+
+.education .timeline::after{
+    content: "";
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+
+
+.timeline .timeline-icon{
+    display: block;
+    width: calc(20px + 0.6vw);
+    height: calc(20px + 0.6vw);
+    line-height: 65px;
+    border-radius: 50%;
+    background: #e4e5e7;
+    border: 8px solid #aecbed;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.timeline .timeline-content-right{
+    float: right;
+    /* padding: 0 30% 0 0%; */
+    padding: 0 10% 0 10%;
+    /* border: 1px solid springgreen; */
+    height: 100%;
+    width: 50%;
+    text-align: left;
+}
+
+.timeline .year-left{
+    width: 50%;
+    text-align: right;
+    right: auto;
+    left: 0;
+    /* border: 1px solid darkviolet; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.year-left span{
+    border-radius: 50px 0 0 50px;
+    padding: 2px 45px 2px 25px;
+    background-color: rgb(234, 236, 240);
+    display: inline-block;
+    color: black;
+}
+
+.timeline .timeline-content{
+    float: left;
+    /* padding: 0 5%; */
+    /* border: 1px solid springgreen; */
+    height: 100%;
+    width: 50%;
+    padding: 0 5% 0 15%;
+}
+
+.timeline .year{
+    width: 50%;
+    text-align: left;
+    right: 0;
+    left: auto;
+    /* border: 1px solid darkviolet; */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.year span{
+    border-radius: 0 50px 50px 0;
+    padding: 2px 35px 2px 35px;
+    background-color: rgb(228, 230, 236);
+    display: inline-block;
+    color: black;
+}
+
+.timeline i{
+    float: left;
+    margin-right: 15px;
+    font-size: calc(10px + 3vw);
+}
+
+
+
+
