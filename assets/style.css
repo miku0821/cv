@@ -10,6 +10,29 @@
     }
     .main {
         padding-left: 0 !important;
+        font-size: 15px;
+        overflow: hidden;
+    }
+
+    .about,
+    .projects{
+        padding: 15% 10% !important;
+    }
+
+    .skills{
+        padding: 15% 0% !important;
+    }
+
+    .education{
+        padding: 15% 0% !important;
+    }
+
+    .education h5{
+        font-size: 16px;
+    }
+
+    .education h6{
+        font-size: 13px;
     }
 }
 
@@ -86,9 +109,13 @@ section{
 
 .home h1{
     color: white;
-    position: absolute;
+    /* position: absolute;
     top: 200px;
-    right: 100px;
+    right: 100px; */
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
 }
 
 
